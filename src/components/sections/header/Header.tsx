@@ -19,8 +19,8 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <a href="#home" className={styles.logoLink} aria-label="TR Transportes início">
-          <img src="/images/logo_tr.svg" alt="Logo TR Transportes" className={styles.logo} />
+        <a href="#home" className={styles.logoLink} aria-label="TR Vicente início">
+          <img src="/images/logo_tr.svg" alt="Logo TR Vicente" className={styles.logo} />
         </a>
 
         <div className={styles.links}>
@@ -45,17 +45,17 @@ export default function Header() {
       </nav>
 
       <div className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ""}`}>
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className={styles.mobileLink}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
+        {NAV_LINKS.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className={styles.mobileLink}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
     </header>
   );
 }

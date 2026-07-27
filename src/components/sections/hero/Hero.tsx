@@ -7,7 +7,7 @@ export default function Hero() {
     <section id="home" className={styles.hero}>
       <Image
         src="/images/hero.jpg"
-        alt="Frota da TR Transportes carregando entregas no Alto Vale do Itajaí"
+        alt="Frota da TR Vicente"
         fill
         priority
         className={styles.image}
@@ -29,8 +29,8 @@ export default function Hero() {
             Cada rota, uma <span className={styles.titleEmphasis}>entrega precisa</span>.
           </h1>
           <p className={styles.subtitle}>
-              Há mais de 15 anos movendo a economia do Alto Vale com frota própria,
-              segurança total e a pontualidade que a sua operação exige.
+            Há mais de 15 anos movendo a economia do Alto Vale com frota própria,
+            segurança total e a pontualidade que a sua operação exige.
           </p>
           <div className={styles.actions}>
             <a href="#contato" className={styles.btnPrimary}>

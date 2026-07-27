@@ -2,18 +2,18 @@ import Image from "next/image";
 import styles from "./Clients.module.css";
 
 const LOGOS = [
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
-  { name: "TR Transportes", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/images/logo_tr.svg" },
 ];
 
 // duplicate list so the marquee can loop seamlessly

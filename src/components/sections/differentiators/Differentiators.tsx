@@ -10,8 +10,7 @@ const DIFFERENTIATORS = [
     title: "Seguro Total",
     description: (
       <>
-        Sua tranquilidade é nossa prioridade. Oferecemos cobertura integral com
-        apólices de <strong>RCTR-C e RCF-DC</strong> em todos os embarques.
+        Em casos de avaria da sua mercadoria, nossa empresa se responsabilizará por <strong>todos os custos</strong>.
       </>
     ),
   },
@@ -32,8 +31,7 @@ const DIFFERENTIATORS = [
     description: (
       <>
         Controle total da operação com{" "}
-        <strong>veículos diversificados e modernos</strong>, adequados para
-        cada especificidade de carga e volume.
+        <strong>veículos de carga expressos</strong>, ideais ao seu pacote.
       </>
     ),
   },

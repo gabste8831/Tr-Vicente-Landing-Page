@@ -9,7 +9,7 @@ const SERVICES = [
     icon: Handshake,
     title: "Parcerias de Longo Prazo",
     description:
-      "Contratos estratégicos com gestão dedicada, integração de ERP e tabelas fixas para planejamento de longo curso.",
+      "Mais do que um contrato, uma parceria real: planejamento conjunto, comunicação fácil e a segurança de contar com a gente no dia a dia.",
   },
   {
     icon: Package,
@@ -27,7 +27,7 @@ const SERVICES = [
     icon: RotateCcw,
     title: "Logística Reversa",
     description:
-      "Retorno planejado de embalagens, paletes ou devoluções. Sustentabilidade e controle total do ciclo de vida da carga.",
+      "Gestão rápida de devoluções e retornos de mercadorias. Atuamos no menor prazo possível para concluir o processo e manter a satisfação estabelecida.",
   },
 ];
 
@@ -108,8 +108,7 @@ export default function Services() {
           <h2 className={styles.title}>Serviços Oferecidos</h2>
           <div className={styles.divider} />
           <p className={styles.lead}>
-            Especialização técnica e compromisso para garantir que sua mercadoria
-            chegue ao destino com integridade total.
+            Logística sob medida e compromisso técnico para levar sua mercadoria ao destino final com total segurança.
           </p>
         </div>
 

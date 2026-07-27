@@ -5,9 +5,9 @@ import { MapPin, Circle, Clock } from "lucide-react";
 import styles from "./Coverage.module.css";
 
 const ITEMS = [
-  { icon: MapPin, label: "Base Estratégica in Rio do Sul" },
-  { icon: Circle, label: "Cobertura total num raio de 150km" },
-  { icon: Clock, label: "Prazos diferenciados para o Alto Vale" },
+  { icon: MapPin, label: "Atividade operacional em todo Alto Vale" },
+  { icon: Circle, label: "Domínio e expertise em rotas regionais" },
+  { icon: Clock, label: "Prazos diferenciados para Rio do Sul e proximidades" },
 ];
 
 const DESKTOP_QUERY = "(min-width: 1024px)";
@@ -151,7 +151,7 @@ export default function Coverage() {
                   <span className={styles.highlight}>Alto Vale do Itajaí</span>,
                   com um raio de atuação de{" "}
                   <span className={styles.highlight}>
-                    150km a partir de Rio do Sul - SC
+                    100km a partir de Rio do Sul - SC
                   </span>
                   .
                 </p>

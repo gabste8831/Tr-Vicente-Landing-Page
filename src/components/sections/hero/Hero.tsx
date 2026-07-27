@@ -29,8 +29,8 @@ export default function Hero() {
             Cada rota, uma <span className={styles.titleEmphasis}>entrega precisa</span>.
           </h1>
           <p className={styles.subtitle}>
-            Há mais de 5 anos movendo a economia do Alto Vale com frota própria,
-            segurança total e pontualidade que se mede em números — não em promessas.
+              Há mais de 15 anos movendo a economia do Alto Vale com frota própria,
+              segurança total e a pontualidade que a sua operação exige.
           </p>
           <div className={styles.actions}>
             <a href="#contato" className={styles.btnPrimary}>

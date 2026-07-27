@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "./About.module.css";
 
 const STATS = [
-  { value: "100k+", label: "Entregas Anuais" },
+  { value: "120k+", label: "Entregas Anuais" },
   { value: "500+", label: "Clientes Atendidos" },
-  { value: "250+", label: "Veículos na Frota" },
+  { value: "14+", label: "Veículos na Frota" },
 ];
 
 export default function About() {
@@ -21,13 +21,13 @@ export default function About() {
             />
           </div>
           <div className={styles.badge}>
-            <span className={styles.badgeValue}>5+</span>
+            <span className={styles.badgeValue}>15+</span>
             <span className={styles.badgeLabel}>Anos de História</span>
           </div>
         </div>
         <div>
           <span className={styles.eyebrow}>Nossa História</span>
-          <h2 className={styles.title}>Tradição e Modernidade em Rio do Sul</h2>
+          <h2 className={styles.title}>Tradição e Modernidade em <br /> Rio do Sul</h2>
           <p className={styles.text}>
             Fundada no coração do Alto Vale, a Vicente Transportes consolidou-se
             como referência em soluções logísticas sob medida. Nossa trajetória é

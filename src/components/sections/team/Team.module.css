@@ -1,6 +1,7 @@
 .section {
-  padding-block: var(--space-2xl);
   background: #ffffff;
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-md);
 }
 
 .container {
@@ -9,147 +10,128 @@
   padding-inline: var(--space-gutter);
 }
 
-.headerRow {
+/* Mesma base da Coverage: empilhado no mobile, 50/50 lado a lado no
+   desktop (ver breakpoint 1024px abaixo). Aqui a imagem vem primeiro
+   no DOM (mobile mostra imagem -> texto) e vira a metade esquerda
+   no desktop. */
+.layout {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-md);
-  margin-bottom: var(--space-lg);
 }
 
-.eyebrow {
-  color: var(--color-secondary);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  font-size: var(--fs-xs);
-  text-transform: uppercase;
-  margin-bottom: var(--space-sm);
+.imageWrap {
+  position: relative;
+  max-width: 420px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.imageFrame {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.image {
   display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
 }
 
 .title {
   color: var(--color-primary);
-  font-size: var(--fs-3xl);
+  font-size: var(--fs-4xl);
   font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
 }
 
-.subtitle {
-  color: rgb(26 28 28 / 0.5);
+.text {
+  color: rgb(26 28 28 / 0.6);
   font-weight: 300;
-  margin-top: var(--space-2xs);
-}
-
-/* Base styling shared by both copies of the arrows. */
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-/* Mobile copy: sits AFTER the carousel in the DOM, so the stacked order
-   becomes text > carousel > arrows. Hidden on desktop. */
-.controlsMobile {
-  margin-top: var(--space-xl);
-}
-
-/* Desktop copy: lives inside the header row. Hidden on mobile so it doesn't
-   duplicate the mobile arrows. */
-.controlsDesktop {
-  display: none;
-}
-
-.controlButton {
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  border: 1px solid rgb(0 17 58 / 0.2);
-  color: var(--color-primary);
-  background: transparent;
-  transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.controlButton:hover {
-  background: rgb(0 17 58 / 0.05);
-}
-
-.controlButton:active {
-  transform: scale(0.95);
-}
-
-/* Carousel viewport: fixed to the container width, clips the sliding track.
-   Negative margin cancels out the card's own padding-inline so the first
-   and last photos line up with the container edge, same as the title above. */
-.viewport {
-  overflow: hidden;
-  width: calc(100% + var(--space-md));
-  margin-inline: calc(var(--space-md) / -2);
-}
-
-/* Track is wider than the viewport (one segment per visible slot) and
-   slides via transform; width/transform are computed in JS since the
-   number of team members and the visible count are both dynamic. */
-.track {
-  display: flex;
-  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.card {
-  flex: 0 0 auto;
-  padding-inline: calc(var(--space-md) / 2);
-  box-sizing: border-box;
-}
-
-.imageFrame {
-  height: 380px;
-  overflow: hidden;
+  font-size: var(--fs-base);
   margin-bottom: var(--space-sm);
-  border: 1px solid var(--color-outline-variant);
-  position: relative;
+  line-height: 1.7;
+  max-width: 560px;
 }
 
-.image {
-  object-fit: cover;
-  transition: scale 0.6s ease;
-}
+/* --- "Dinâmica de cores" no texto --- */
 
-.image:hover {
-  scale: 1.01;
-}
-
-.name {
+.highlightNavy {
+  font-weight: 400;
   color: var(--color-primary);
-  font-size: var(--fs-lg);
+}
+
+.highlightRed {
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+/* Assinatura dos fundadores: barra em degradê + nomes/cargo, reforçando
+   a paleta de forma mais gráfica que o texto corrido acima. */
+.signature {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+  padding-top: var(--space-sm);
+}
+
+.signatureBar {
+  flex: 0 0 3px;
+  border-radius: 999px;
+  background: var(--color-secondary);
+}
+
+.signatureText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.signatureNames {
+  color: var(--color-primary);
+  font-size: var(--fs-md);
   font-weight: 400;
 }
 
-.role {
-  color: rgb(26 28 28 / 0.4);
+.signatureAmp {
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.signatureRole {
+  color: rgb(26 28 28 / 0.45);
   font-size: var(--fs-2xs);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  margin-top: var(--space-2xs);
 }
 
-@media (min-width: 768px) {
-  .headerRow {
+@media (min-width: 1024px) {
+  .layout {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    gap: var(--space-2xl);
   }
 
-  .imageFrame {
-    height: 320px;
+  .imageWrap {
+    flex: 0 1 auto;
+    max-width: 460px;
+    width: 100%;
   }
 
-  /* On desktop: show the header copy of the arrows, hide the mobile copy. */
-  .controlsDesktop {
-    display: flex;
-  }
-
-  .controlsMobile {
-    display: none;
+  .content {
+    flex: 1 1 auto;
+    max-width: 600px;
   }
 }

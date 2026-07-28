@@ -7,7 +7,7 @@ export default function Team() {
         <div className={styles.layout}>
           <div className={styles.imageWrap}>
             <div className={styles.imageFrame}>
-              <img src="/images/logo_tr.svg" alt="Fotografia pai e filho representando raízes familiares na empresa TR Vicente" />
+              <img src="/images/download.jpg" className={styles.image} alt="Fotografia pai e filho representando raízes familiares na empresa TR Vicente" />
             </div>
           </div>
 
@@ -18,19 +18,18 @@ export default function Team() {
             </h2>
             <p className={styles.text}>
               Tudo começou como um sonho compartilhado entre{" "}
-              <span className={styles.highlightNavy}>pai e filho</span>: transformar
+              <span className={styles.text}>pai e filho</span>: transformar
               dedicação e trabalho duro em uma transportadora de confiança para o
-              Alto Vale do Itajaí. Quinze anos depois, essa mesma essência{" "}
+              Alto Vale. Quinze anos depois, essa mesma essência{" "}
               <span className={styles.highlightRed}>familiar</span> segue no centro
               de cada rota, e transformou a empresa em{" "}
-              <span className={styles.highlightRed}>referência regional</span> no
-              ramo de transportes.
+              <span className={styles.highlightRed}>referência regional</span>.
             </p>
             <p className={styles.text}>
               Mais do que uma estrutura corporativa, a Vicente Transportes carrega um
               sobrenome, uma história e um compromisso pessoal com cada cliente
               atendido - algo que só uma empresa de{" "}
-              <span className={styles.highlightNavy}>raízes familiares</span> pode
+              <span className={styles.text}>raízes familiares</span> pode
               oferecer.
             </p>
 

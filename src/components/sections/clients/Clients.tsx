@@ -2,17 +2,9 @@ import Image from "next/image";
 import styles from "./Clients.module.css";
 
 const LOGOS = [
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "TR Vicente", src: "/logos-clientes/expresso-sao-miguel.png" },
+  { name: "TR Vicente", src: "/logos-clientes/alnak.png" },
+  { name: "TR Vicente", src: "/logos-clientes/expresso-sao-miguel.png" },
   { name: "TR Vicente", src: "/images/logo_tr.svg" },
 ];
 

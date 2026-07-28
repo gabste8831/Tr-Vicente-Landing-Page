@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, FormEvent } from "react";
 import { MapPin, Phone, Mail, Briefcase, ChevronDown } from "lucide-react";
 import styles from "./Contact.module.css";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xojgvnro";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzdnoadz";
 
 const SUBJECTS = [
   "Solicitar Orçamento",

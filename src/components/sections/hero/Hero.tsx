@@ -1,6 +1,9 @@
 import Image from "next/image";
-import { ArrowRight, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { WhatsappIcon } from "../../icons";
 import styles from "./Hero.module.css";
+
+
 
 export default function Hero() {
   return (
@@ -33,9 +36,14 @@ export default function Hero() {
             segurança total e a pontualidade que a sua operação exige.
           </p>
           <div className={styles.actions}>
-            <a href="#contato" className={styles.btnPrimary}>
+            <a 
+              href="https://wa.me/5547999990000?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.btnPrimary}
+            >
+              <WhatsappIcon size={18} />
               Solicitar Orçamento
-              <ArrowRight size={16} />
             </a>
             <a href="#servicos" className={styles.btnSecondary}>
               Conhecer Serviços

@@ -135,5 +135,9 @@ ul {
   animation-duration: var(--marquee-duration, 32s);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  min-width: 200%;
+  /* width (não min-width) garante que a trilha meça exatamente a soma dos
+     dois conjuntos de logos duplicados, sem sobra de espaço no fim. Assim
+     translateX(-50%) sempre pousa exatamente na borda entre o 1º e o 2º
+     conjunto, eliminando o salto/travadinha ao reiniciar o loop. */
+  width: max-content;
 }

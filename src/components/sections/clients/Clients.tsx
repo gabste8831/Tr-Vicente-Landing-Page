@@ -2,10 +2,14 @@ import Image from "next/image";
 import styles from "./Clients.module.css";
 
 const LOGOS = [
-  { name: "TR Vicente", src: "/logos-clientes/expresso-sao-miguel.png" },
-  { name: "TR Vicente", src: "/logos-clientes/alnak.png" },
-  { name: "TR Vicente", src: "/logos-clientes/expresso-sao-miguel.png" },
-  { name: "TR Vicente", src: "/images/logo_tr.svg" },
+  { name: "Alnak", src: "/logos-clientes/Alnak.png" },
+  { name: "Coremma", src: "/logos-clientes/Coremma.png" },
+  { name: "MD Auto Peças", src: "/logos-clientes/MD Auto Peças.png" },
+  { name: "SB Tratores", src: "/logos-clientes/sb tratores.png" },
+  { name: "MB Metal Mecânica", src: "/logos-clientes/mb metal mecanica.png" },
+  { name: "Mecânica Diesel do Jairo", src: "/logos-clientes/mecanica diesel do jairo.png" },
+  { name: "CJ Automotiva", src: "/logos-clientes/cj automotiva.png" },
+  { name: "Expresso São Miguel", src: "/logos-clientes/expresso são miguel.png" },
 ];
 
 // duplicate list so the marquee can loop seamlessly

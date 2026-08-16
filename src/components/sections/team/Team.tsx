@@ -7,7 +7,7 @@ export default function Team() {
         <div className={styles.layout}>
           <div className={styles.imageWrap}>
             <div className={styles.imageFrame}>
-              <img src="/images/download.jpg" className={styles.image} alt="Fotografia pai e filho representando raízes familiares na empresa TR Vicente" />
+              <img src="/images/foto pai e filho.jpg" className={styles.image} alt="Fotografia pai e filho representando raízes familiares na empresa TR Vicente" />
             </div>
           </div>
 

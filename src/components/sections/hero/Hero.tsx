@@ -37,7 +37,7 @@ export default function Hero() {
           </p>
           <div className={styles.actions}>
             <a 
-              href="https://wa.me/5547999990000?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21" 
+              href="https://wa.me/5547997735219?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnPrimary}

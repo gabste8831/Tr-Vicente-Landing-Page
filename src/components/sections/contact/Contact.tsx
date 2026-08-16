@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Briefcase, ChevronDown } from "lucide-react";
 import { WhatsappIcon } from "../../icons";
 import styles from "./Contact.module.css";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzdnoadz";
+const CONTACT_EMAIL = "fabiotrvicente@gmail.com";
 
 const SUBJECTS = [
   "Solicitar Orçamento",
@@ -17,7 +17,7 @@ const SUBJECTS = [
 
 
 
-type Status = "idle" | "sending" | "success" | "error";
+type Status = "idle" | "opened";
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
@@ -47,29 +47,28 @@ export default function Contact() {
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  // Sem backend: monta um link "mailto:" com os dados preenchidos e deixa o
+  // próprio visitante enviar pelo aplicativo/webmail dele. Zero conta, zero
+  // credencial, zero serviço terceiro — só depende de haver um cliente de
+  // e-mail configurado no dispositivo de quem preenche o formulário.
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    setStatus("sending");
-    try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
+    const name = String(data.get("name") ?? "");
+    const email = String(data.get("email") ?? "");
+    const messageBody = String(data.get("message") ?? "");
 
-      if (response.ok) {
-        setStatus("success");
-        form.reset();
-        setSubject(SUBJECTS[0]); // reseta também o dropdown customizado
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+    const mailSubject = `[Site TR Vicente] ${subject} — ${name}`;
+    const mailBody = `Nome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\n\nMensagem:\n${messageBody}`;
+
+    const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      mailSubject
+    )}&body=${encodeURIComponent(mailBody)}`;
+
+    window.location.href = mailtoLink;
+    setStatus("opened");
   }
 
   return (
@@ -92,7 +91,9 @@ export default function Contact() {
                 <div>
                   <p className={styles.detailLabel}>Telefones</p>
                   <p className={styles.detailText}>
-                    (47) 3521-0000 | (47) 99999-0000
+                    Fábio: (47) 99773-5219
+                    <br />
+                    Cláudio: (47) 99156-7121
                   </p>
                 </div>
               </div>
@@ -109,7 +110,7 @@ export default function Contact() {
             <div className={styles.socialRow}>
               <a 
                 aria-label="WhatsApp" 
-                href="https://wa.me/5547999990000?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21" 
+                href="https://wa.me/5547991567121?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialCircle}
@@ -225,22 +226,14 @@ export default function Contact() {
               </div>
 
               <div className={styles.submitWrap}>
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className={styles.submitButton}
-                >
-                  {status === "sending" ? "Enviando..." : "Enviar Mensagem"}
+                <button type="submit" className={styles.submitButton}>
+                  Enviar Mensagem
                 </button>
 
-                {status === "success" && (
+                {status === "opened" && (
                   <p className={styles.statusMessage} role="status">
-                    Mensagem enviada com sucesso!<br />Nossa equipe entrará em contato em breve.
-                  </p>
-                )}
-                {status === "error" && (
-                  <p className={styles.statusMessage} role="alert">
-                    Não foi possível enviar sua mensagem. Tente novamente ou fale com a gente pelo WhatsApp.
+                    Abrimos seu aplicativo de e-mail com a mensagem pronta.<br />
+                    É só conferir e clicar em enviar por lá.
                   </p>
                 )}
               </div>

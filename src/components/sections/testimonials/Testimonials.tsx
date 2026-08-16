@@ -7,39 +7,43 @@ import styles from "./Testimonials.module.css";
 const TESTIMONIALS = [
   {
     quote:
-      "A pontualidade e o cuidado com a carga são os diferenciais da Vicente Transportes. Desde que iniciamos a parceria, reduzimos nossas perdas logísticas em 15%.",
-    name: "Carlos Eduardo Rocha",
-    role: "Diretor de Logística, Agro-Corp",
+      "A pontualidade e o cuidado com a carga são os diferenciais da Vicente Transportes. Uma parceria de confiança para o nosso dia a dia.",
+    name: "Alnak",
   },
   {
     quote:
-      "O atendimento personalizado e a transparência no rastreamento nos dão a segurança necessária para focar no crescimento do nosso varejo.",
-    name: "Mariana Silveira",
-    role: "Gerente de Operações, Rede Varejo",
+      "Atendimento ágil e transparente, com a segurança que precisamos para manter nossa operação em dia.",
+    name: "Coremma",
   },
   {
     quote:
-      "Uma empresa que entende as urgências do setor têxtil. Sempre prontos para atender demandas complexas com agilidade e precisão.",
-    name: "Roberto Mendes",
-    role: "CEO, Sul Têxtil",
+      "A Vicente Transportes entende as urgências do nosso setor e sempre entrega com agilidade e precisão.",
+    name: "MD Autopeças",
   },
   {
     quote:
-      "A confiabilidade nas entregas e a comunicação durante todo o processo fizeram da Vicente Transportes um parceiro estratégico para nossa operação.",
-    name: "Fernanda Oliveira",
-    role: "Coordenadora de Suprimentos, Indústria Nova Era",
+      "Confiabilidade nas entregas e comunicação clara em todo o processo. Um parceiro estratégico para nossa operação.",
+    name: "SB Tratores",
   },
   {
     quote:
-      "Mesmo em períodos de alta demanda, a equipe sempre cumpriu os prazos acordados. É uma parceria que transmite confiança e profissionalismo.",
-    name: "Ricardo Almeida",
-    role: "Gerente de Distribuição, Alimentos Serranos",
+      "Mesmo em períodos de alta demanda, a equipe sempre cumpre os prazos acordados com profissionalismo.",
+    name: "MB Metal Mecânica",
   },
   {
     quote:
-      "Encontramos na Vicente Transportes um serviço ágil, seguro e com excelente suporte. O compromisso com a qualidade faz toda a diferença no dia a dia.",
-    name: "Patrícia Gomes",
-    role: "Diretora Administrativa, Metalúrgica Horizonte",
+      "Serviço ágil, seguro e com excelente suporte. O compromisso com a qualidade faz toda a diferença no dia a dia.",
+    name: "Mecânica Diesel Jairo",
+  },
+  {
+    quote:
+      "Uma transportadora séria, que cumpre o combinado e trata cada entrega com o cuidado que a nossa empresa precisa.",
+    name: "CJ Autopeças",
+  },
+  {
+    quote:
+      "Parceria de longa data, sempre com pontualidade e cuidado no transporte das nossas cargas.",
+    name: "Expresso São Miguel",
   },
 ];
 
@@ -152,7 +156,6 @@ export default function Testimonials() {
                   <p className={styles.quote}>&ldquo;{t.quote}&rdquo;</p>
                   <div className={styles.footer}>
                     <p className={styles.name}>{t.name}</p>
-                    <p className={styles.role}>{t.role}</p>
                   </div>
                 </div>
               </div>

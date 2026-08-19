@@ -28,7 +28,7 @@ export default function Footer() {
               </a> */}
               <a 
                 aria-label="WhatsApp" 
-                href="https://wa.me/5547991567121?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21"
+                href="https://wa.me/5547997567121?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
@@ -68,11 +68,11 @@ export default function Footer() {
               <li>
                 <a 
                   className={styles.contactLink} 
-                  href="https://wa.me/5547999990000?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21"
+                  href="https://wa.me/5547997567121?text=Ol%C3%A1%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20com%20a%20Tr%20Vicente%21"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className={styles.contactIcon}><WhatsappIcon size={16} /></span> (47) 99156-7121
+                  <span className={styles.contactIcon}><WhatsappIcon size={16} /></span> (47) 99756-7121
                 </a>
               </li>
             </ul>

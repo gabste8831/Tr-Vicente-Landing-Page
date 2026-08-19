@@ -9,7 +9,6 @@ const LOGOS = [
   { name: "MB Metal Mecânica", src: "/logos-clientes/mb metal mecanica.png" },
   { name: "Mecânica Diesel do Jairo", src: "/logos-clientes/mecanica diesel do jairo.png" },
   { name: "CJ Automotiva", src: "/logos-clientes/cj automotiva.png" },
-  { name: "Expresso São Miguel", src: "/logos-clientes/expresso são miguel.png" },
 ];
 
 // duplicate list so the marquee can loop seamlessly

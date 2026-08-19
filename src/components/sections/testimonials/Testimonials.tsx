@@ -40,11 +40,6 @@ const TESTIMONIALS = [
       "Uma transportadora séria, que cumpre o combinado e trata cada entrega com o cuidado que a nossa empresa precisa.",
     name: "CJ Autopeças",
   },
-  {
-    quote:
-      "Parceria de longa data, sempre com pontualidade e cuidado no transporte das nossas cargas.",
-    name: "Expresso São Miguel",
-  },
 ];
 
 function useVisibleCount() {

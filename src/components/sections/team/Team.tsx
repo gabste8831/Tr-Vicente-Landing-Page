@@ -7,30 +7,28 @@ export default function Team() {
         <div className={styles.layout}>
           <div className={styles.imageWrap}>
             <div className={styles.imageFrame}>
-              <img src="/images/foto pai e filho.jpg" className={styles.image} alt="Fotografia pai e filho representando raízes familiares na empresa TR Vicente" />
+              <img src="/images/carrospaiefilho.jpg" className={styles.image} alt="Cláudio e Fábio Vicente, responsáveis pela gestão da TR Vicente" />
             </div>
           </div>
 
           <div className={styles.content}>
             <h2 className={styles.title}>
-              <span className={styles.highlightRed}>Há 15 anos</span> construindo uma{" "}
-              <span className={styles.highlightRed}>história de família</span>
+              <span className={styles.highlightRed}>Há 15 anos</span> na estrada, com{" "}
+              <span className={styles.highlightRed}>gestão direta</span> de pai e filho
             </h2>
             <p className={styles.text}>
-              Tudo começou como um sonho compartilhado entre{" "}
-              <span className={styles.text}>pai e filho</span>: transformar
-              dedicação e trabalho duro em uma transportadora de confiança para o
-              Alto Vale. Quinze anos depois, essa mesma essência{" "}
-              <span className={styles.highlightRed}>familiar</span> segue no centro
-              de cada rota, e transformou a empresa em{" "}
-              <span className={styles.highlightRed}>referência regional</span>.
+              A Vicente Transportes é administrada por{" "}
+              <span className={styles.text}>Cláudio e Fábio Vicente</span>, que
+              acompanham de perto cada etapa da operação: da rota ao atendimento.
+              Isso significa decisão rápida, resposta direta e{" "}
+              <span className={styles.highlightRed}>responsabilidade clara</span> em
+              cada frete.
             </p>
             <p className={styles.text}>
-              Mais do que uma estrutura corporativa, a Vicente Transportes carrega um
-              sobrenome, uma história e um compromisso pessoal com cada cliente
-              atendido - algo que só uma empresa de{" "}
-              <span className={styles.text}>raízes familiares</span> pode
-              oferecer.
+              Quinze anos de trabalho constante consolidaram a empresa como{" "}
+              <span className={styles.highlightRed}>referência regional</span> em
+              transporte no Alto Vale, com estrutura própria e processos que
+              garantem prazo e segurança em cada entrega.
             </p>
 
             <div className={styles.signature}>

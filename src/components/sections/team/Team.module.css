@@ -29,12 +29,13 @@
 }
 
 .imageFrame {
-  aspect-ratio: 1023 / 1537;
+  aspect-ratio: 1080 / 1350;
   width: 100%;
   border-radius: 14px;
   overflow: hidden;
   display: flex;
   align-items: center;
+  box-shadow: 0 12px 32px -8px rgb(26 28 28 / 0.18);
 }
 
 .image {

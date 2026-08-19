@@ -55,18 +55,18 @@
      in view far longer than on desktop (~5 logos visible at once). Scaling
      the duration down as the viewport narrows keeps the pace feeling
      similar across screen sizes. */
-  --marquee-duration: 8s;
+  --marquee-duration: 18s;
 }
 
 @media (min-width: 640px) {
   .marqueeTrack {
-    --marquee-duration: 18s;
+    --marquee-duration: 26s;
   }
 }
 
 @media (min-width: 1024px) {
   .marqueeTrack {
-    --marquee-duration: 28s;
+    --marquee-duration: 38s;
   }
 }
 

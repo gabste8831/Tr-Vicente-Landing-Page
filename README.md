@@ -72,9 +72,9 @@ Ficam em `public/logos-clientes/` e são listadas no array `LOGOS` em `src/compo
 
 **Atenção a maiúsculas/minúsculas:** o caminho no código precisa bater exatamente com o nome do arquivo. No Windows a diferença passa despercebida, mas na Vercel (Linux) a imagem não é encontrada e a logo aparece quebrada.
 
-## Imagens que ainda são placeholder
+## Imagem da seção Sobre
 
-A imagem da seção **Sobre** (`src/components/sections/about/About.tsx`) ainda é a imagem de exemplo gerada pelo Google Stitch, hospedada em `lh3.googleusercontent.com` (domínio liberado no `next.config.ts`). Para trocar, coloque a foto em `public/images/` e aponte o `src` para `/images/arquivo.jpg`.
+A foto dos veículos da seção **Sobre** (`src/components/sections/about/About.tsx`) é carregada de `lh3.googleusercontent.com` (domínio liberado no `next.config.ts`), e não de `public/images/` como as demais.
 
 ## Deploy
 

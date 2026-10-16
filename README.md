@@ -45,7 +45,7 @@ src/
       contact/          # formulário de contato (FormSubmit)
       footer/
 public/
-  images/               # hero, foto da equipe e logos da TR Vicente
+  images/               # todas as fotos do site (hero, sobre, equipe) e logos da TR Vicente
   logos-clientes/       # logos dos clientes exibidas no marquee
   coverage-frames/      # frames da animação da seção de cobertura
 ```
@@ -71,10 +71,6 @@ Para trocar o e-mail de destino, basta atualizar a constante `CONTACT_ENDPOINT` 
 Ficam em `public/logos-clientes/` e são listadas no array `LOGOS` em `src/components/sections/clients/Clients.tsx`.
 
 **Atenção a maiúsculas/minúsculas:** o caminho no código precisa bater exatamente com o nome do arquivo. No Windows a diferença passa despercebida, mas na Vercel (Linux) a imagem não é encontrada e a logo aparece quebrada.
-
-## Imagem da seção Sobre
-
-A foto dos veículos da seção **Sobre** (`src/components/sections/about/About.tsx`) é carregada de `lh3.googleusercontent.com` (domínio liberado no `next.config.ts`), e não de `public/images/` como as demais.
 
 ## Deploy
 

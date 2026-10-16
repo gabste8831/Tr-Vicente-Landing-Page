@@ -14,7 +14,7 @@ export default function About() {
         <div className={styles.imageWrap}>
           <div className={styles.imageFrame}>
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYqt26P7FV-NBsI5o4zGV3tI9LGi4am7N7toj1rs7aIPKzL7ESK0C81cQIUehvCxC7n2v14b2XaUbyhTZV-3icQRfT7qd7Iytcis7EswqkYDTYwUhQ--fshqffWHW9jeKQEZK7ggBghwo_AltdYEk7yLnD9ik2KTWnRevLrocOzSyKZpiKIfx-Rutz9C_uoHfTgZkG2C0J28bS8N6GouGlDKgxzOB4grSUQmly9QEBQaqVVV42Om0tXhmmlPv4xpRpkxi-1PH_tFnIbg"
+              src="/images/sobre-rio-do-sul.jpg"
               alt="Cidade Rio do Sul Santa Catarina"
               fill
               className={styles.image}

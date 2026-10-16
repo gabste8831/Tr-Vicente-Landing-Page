@@ -5,7 +5,10 @@ import { MapPin, Phone, Mail, Briefcase, ChevronDown } from "lucide-react";
 import { WhatsappIcon } from "../../icons";
 import styles from "./Contact.module.css";
 
-const CONTACT_ENDPOINT = "/api/contact";
+// FormSubmit (formsubmit.co): encaminha o formulário direto para o e-mail,
+// sem cadastro, chave de API ou backend. No primeiro envio o FormSubmit manda
+// um e-mail de ativação para este endereço — basta clicar no link uma vez.
+const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/fabiotrvicente@gmail.com";
 
 const SUBJECTS = [
   "Solicitar Orçamento",
@@ -51,15 +54,22 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    const name = String(data.get("name") ?? "").trim();
+
+    data.set("_subject", `[Site TR Vicente] ${subject} — ${name}`);
+    data.set("_template", "table");
+    data.set("_captcha", "false");
 
     setStatus("sending");
     try {
       const response = await fetch(CONTACT_ENDPOINT, {
         method: "POST",
+        headers: { Accept: "application/json" },
         body: data,
       });
+      const result = await response.json().catch(() => null);
 
-      if (response.ok) {
+      if (response.ok && String(result?.success) === "true") {
         setStatus("success");
         form.reset();
         setSubject(SUBJECTS[0]); // reseta também o dropdown customizado
@@ -135,6 +145,15 @@ export default function Contact() {
           {/* Right Column: Form */}
           <div className={styles.formWrap}>
             <form onSubmit={handleSubmit} className={styles.form}>
+              {/* honeypot anti-spam do FormSubmit: invisível p/ pessoas, bots preenchem */}
+              <input
+                type="text"
+                name="_honey"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ display: "none" }}
+              />
               <div className={styles.formRow}>
                 <div className={styles.field}>
                   <label htmlFor="name" className={styles.label}>

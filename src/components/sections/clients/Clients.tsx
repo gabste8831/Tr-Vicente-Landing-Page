@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./Clients.module.css";
 
 const LOGOS = [
-  { name: "Alnak", src: "/logos-clientes/Alnak.png" },
+  { name: "Alnak", src: "/logos-clientes/alnak.png" },
   { name: "Coremma", src: "/logos-clientes/Coremma.png" },
   { name: "MD Auto Peças", src: "/logos-clientes/MD Auto Peças.png" },
   { name: "SB Tratores", src: "/logos-clientes/sb tratores.png" },

@@ -1,6 +1,8 @@
 # Vicente Transportes — Landing Page
 
-Landing page institucional construída em **Next.js 16 (App Router) + TypeScript + Tailwind CSS v4**, a partir do design gerado no Google Stitch.
+Landing page institucional da TR Vicente, construída em **Next.js 16 (App Router) + TypeScript + CSS Modules**.
+
+Produção: https://tr-transportes-landing-page.vercel.app
 
 ## Rodando localmente
 
@@ -18,52 +20,62 @@ npm run build
 npm run start
 ```
 
+O site é 100% estático — não precisa de variáveis de ambiente nem de backend.
+
 ## Estrutura
 
 ```
 src/
   app/
-    layout.tsx      # fontes (Be Vietnam Pro, self-hosted via @fontsource) e metadata
-    page.tsx         # monta todas as seções na ordem
-    globals.css      # tokens de cor/espaçamento do design system (DESIGN.md)
+    layout.tsx          # fonte Montserrat (self-hosted via @fontsource), metadata e favicon
+    page.tsx            # monta todas as seções na ordem
+    globals.css         # tokens de cor/espaçamento do design system
   components/
-    Header.tsx        # nav fixo + menu mobile
-    Hero.tsx           # imagem + overlay gradiente azul + headline
-    About.tsx
-    Services.tsx
-    Coverage.tsx
-    Differentiators.tsx
-    Team.tsx
-    Clients.tsx        # marquee de logos
-    Testimonials.tsx    # carrossel funcional (useState)
-    Contact.tsx         # formulário conectado ao Formspree
-    Footer.tsx
+    icons.tsx           # ícones de marca (WhatsApp etc.)
+    sections/           # cada seção em sua pasta, com Componente.tsx + Componente.module.css
+      header/           # nav fixo + menu mobile
+      hero/
+      about/
+      services/
+      coverage/         # animação por frames (public/coverage-frames)
+      differentiators/
+      team/
+      clients/          # marquee de logos (public/logos-clientes)
+      testimonials/     # carrossel de depoimentos
+      contact/          # formulário de contato (FormSubmit)
+      footer/
 public/
-  images/hero.jpg     # imagem enviada por você
+  images/               # hero, foto da equipe e logos da TR Vicente
+  logos-clientes/       # logos dos clientes exibidas no marquee
+  coverage-frames/      # frames da animação da seção de cobertura
 ```
 
-## Formulário de contato (Formspree)
+## Formulário de contato (FormSubmit)
 
-O formulário em `src/components/Contact.tsx` envia para:
+O formulário em `src/components/sections/contact/Contact.tsx` envia direto para o e-mail do cliente pelo [FormSubmit](https://formsubmit.co), sem cadastro, login ou chave de API:
 
 ```
-https://formspree.io/f/xojgvnro
+https://formsubmit.co/ajax/fabiotrvicente@gmail.com
 ```
 
-Isso já está funcional — ao testar em produção, a primeira submissão de cada formulário novo no Formspree pede uma confirmação por e-mail (comportamento padrão da plataforma, não é bug). Depois disso os envios seguintes caem direto na sua caixa de entrada/dashboard.
+- O e-mail chega com o assunto `[Site TR Vicente] <Assunto> — <Nome>` e os dados em formato de tabela.
+- O "Responder" do e-mail já vai para o endereço de quem preencheu o formulário.
+- Há um campo honeypot (`_honey`) invisível para barrar spam de bots.
 
-Se quiser trocar de conta/endpoint no futuro, é só atualizar a constante `FORMSPREE_ENDPOINT` no topo do arquivo.
+**Ativação:** o primeiro envio para um endereço novo dispara um e-mail do FormSubmit com o link "Activate Form". Depois de clicar nele uma vez, todos os envios seguintes chegam normalmente. A ativação é feita por domínio — testes em `localhost` podem pedir uma nova ativação.
 
-## Imagens que ainda são placeholders do Stitch
+Para trocar o e-mail de destino, basta atualizar a constante `CONTACT_ENDPOINT` no topo do arquivo (e ativar o novo endereço da mesma forma).
 
-Só a imagem da Hero é sua (a foto da frota/van). As demais seções (Sobre, Cobertura/mapa, Equipe, Clientes) ainda usam as imagens de exemplo geradas pelo Stitch (hospedadas no domínio `lh3.googleusercontent.com`, já liberado no `next.config.ts`). Troque por fotos reais quando tiver — é só substituir a `src` de cada `<Image>` em `About.tsx`, `Coverage.tsx`, `Team.tsx` e `Clients.tsx` (ou colocar os arquivos em `public/images/` e apontar para `/images/arquivo.jpg`).
+## Logos de clientes
+
+Ficam em `public/logos-clientes/` e são listadas no array `LOGOS` em `src/components/sections/clients/Clients.tsx`.
+
+**Atenção a maiúsculas/minúsculas:** o caminho no código precisa bater exatamente com o nome do arquivo. No Windows a diferença passa despercebida, mas na Vercel (Linux) a imagem não é encontrada e a logo aparece quebrada.
+
+## Imagens que ainda são placeholder
+
+A imagem da seção **Sobre** (`src/components/sections/about/About.tsx`) ainda é a imagem de exemplo gerada pelo Google Stitch, hospedada em `lh3.googleusercontent.com` (domínio liberado no `next.config.ts`). Para trocar, coloque a foto em `public/images/` e aponte o `src` para `/images/arquivo.jpg`.
 
 ## Deploy
 
-O jeito mais rápido é a Vercel (mesma empresa do Next.js):
-
-```bash
-npx vercel
-```
-
-Ou conectando o repositório GitHub direto em vercel.com/new.
+O repositório está conectado à Vercel: cada push na branch `master` publica automaticamente em produção.

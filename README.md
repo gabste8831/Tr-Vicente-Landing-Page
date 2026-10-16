@@ -2,7 +2,7 @@
 
 Landing page institucional da TR Vicente, construída em **Next.js 16 (App Router) + TypeScript + CSS Modules**.
 
-Produção: https://tr-vicente-landing-page.vercel.app
+Produção: https://www.trvicente.com.br
 
 ## Rodando localmente
 
